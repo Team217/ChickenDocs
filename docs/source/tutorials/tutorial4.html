@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thunderchickens Java Tutorial</title>
+    <link rel="stylesheet" href="./data/main.css">
+</head>
+
+<body>
+    <div style="display: none;" id="data">Page4</div>
+    <div class="center title">
+        <h1>Java Tutorial | Tutorial 4</h1>
+        <h2>Connecting Hardware</h2>
+    </div>
+    <hr>
+    <div class="accent body">
+        <h2>
+            Welcome to the fourth Thunderchickens Java Tutorial.
+        </h2>
+    </div>
+    <div class="body">
+        <h2>
+            This tutorial will answer these questions:
+            <ol>
+                <li>What hardware do we use?</li>
+                <li>How do we tune that hardware?</li>
+            </ol>
+            There's a lot to do, so let's get started!
+        </h2>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            What hardware do we use?
+        </h1>
+    </div>
+    <div class="body accent">
+        <h3>
+            We've already talked a bit about the hardware we use, but let's dig in a bit deeper... We'll talk about
+            motors, motor controllers, gyroscopes, limit switches, banner sensors, encoders, and LEDs.
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            Motors
+        </h1>
+    </div>
+    <div class="body">
+        <h3>
+            The most common motor we use on our robots are the Neo Brushless motors. But what does "brushless" mean?
+            First, we need to know what a brushed motor is. Brushed motors have physical brushes that make contact with
+            a commutator (big boy motor word) to transfer electricity to the rotor (rotatey thingy), while brushless
+            motors use electronic switching to control the magnetic field, eliminating the need for brushes. Brushless
+            motors are significantly more efficient and have longer lifespans compared to brushed motors because they
+            lack physical brushes, which eliminates friction and wear caused by contact with a commutator.
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            Motor Controllers
+        </h1>
+    </div>
+    <div class="body accent">
+        <h3>
+            So we have motors, but how do we control them? We use Spark MAXes to do this. Spark MAXes are motor
+            controllers developed by REV Robotics. They control the speed, direction, and other aspects of motors, often
+            used with the brushless motors, such as the NEO motors we talked about above.
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            Gyroscopes
+        </h1>
+    </div>
+    <div class="body">
+        <h3>
+            Short things short, a gyroscope allows us to drive the same direction no matter how the robot is rotated.
+            This is useful because the functioning parts on our robot are typically on all sides, so we must rotate the
+            robot for those functions to work. (Think back to the different subsystems). Instead of straining your eyes
+            figuing out how the robot is rotated, you can just drive!
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            Limit Switches
+        </h1>
+    </div>
+    <div class="body accent">
+        <h3>
+            Limit switches are pieces of hardware that we use to limit other hardware, like motors. If you remember the
+            elevator subsystem from the 2025 robot, you can see that we use limit switches to determine when the motors
+            stop. We placed the limit switches at the top and bottom of our elevator so that we couldn't go past the
+            floor or ceiling. This is only one example of how limit switches are used; the sky is the limit!
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            Banner Sensors
+        </h1>
+    </div>
+    <div class="body">
+        <h3>
+            Using banner sensors is another way of limiting other hardware. They serve the same purpose, but function a
+            bit differently. Instead of hitting a physical button, hardware intercepts a beam the sensor is outputing,
+            and that sends a signal to software to trigger a function.
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            Encoders
+        </h1>
+    </div>
+    <div class="body accent">
+        <h3>
+            Encoders work with the motors. But what do encoders do? Encoders take the physical motor properties and turn
+            them into digital properties. The encoder allows us to track rotation speed, and position of the motor. This
+            is useful for applications like our robot. According to <a
+                href="https://docs.wpilib.org/en/stable/docs/software/hardware-apis/sensors/encoders-software.html#encoders-software">this
+                resource</a>, "Encoders are devices used to measure motion (usually, the rotation of a shaft)."
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            LEDs
+        </h1>
+    </div>
+    <div class="body">
+        <h3>
+            Party Time! 🎉🎊🎈 LED is an acronym for a light-emitting diode. LEDs have a few uses to them on a robot.
+            First, they can relay critical information visually very quick. Second, pretty lights yippeeeeee!
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            How do we tune that hardware?
+        </h1>
+    </div>
+    <div class="body accent">
+        <h3>
+            We use PID controllers to tune the hardware mentioned above. What does tuning mean, though? A motor doesn't
+            just move on it's own with code. You need PID(F) values to determine how fast and accurate the motor moves.
+            PID is an incremental concept, meaning P has the most affect, then I, then D, and so on. That being said, we
+            tune motors using P first, working our way down the line.
+        </h3>
+    </div>
+    <br>
+    <div class="footer body">
+        <button onclick="previousbutton()">Previous</button>
+        <button onclick="nextbutton()">Next</button>
+    </div>
+    <br>
+    <br>
+    <div class="body accent center" id="footer"></div>
+</body>
+
+<script src="./data/index.js"></script>
+
+</html>

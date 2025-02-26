@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thunderchickens Java Tutorial</title>
+    <link rel="stylesheet" href="./data/main.css">
+</head>
+
+<body>
+    <div style="display: none;" id="data">Page2</div>
+    <div class="center title">
+        <h1>Java Tutorial | Tutorial 2</h1>
+        <h2>Java Basics</h2>
+    </div>
+    <hr>
+    <div class="accent body">
+        <h2>
+            Welcome to the second Thunderchickens Java Tutorial.
+        </h2>
+    </div>
+    <div class="body">
+        <h2>
+            This tutorial will answer these questions:
+            <ol>
+                <li>What are data types?</li>
+                <li>How do I create variables?</li>
+                <li>What are classes?</li>
+                <li>What are objects?</li>
+                <li>What are loops?</li>
+                <li>What are constants?</li>
+                <li>What is Camel Case?</li>
+            </ol>
+            There's a lot to do, so let's get started!
+        </h2>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            What are data types?
+        </h1>
+    </div>
+    <div class="body accent">
+        <h3>
+            Java is special in that you have to declare variable types before the variable name. If you're familiar with
+            JavaScript, you can just do "var num = 0" or "var welcome = "hello". With Java, it's a little more
+            complicated. In Java, you have to say what your variable is. Is it a number, string, double, or some other
+            type? Some common data types we use are:
+            <br>
+            <ul>
+                <li>double - A type of number capaple of storing decimal numbers with a high degree of precision</li>
+                <li>boolean - True or False</li>
+                <li>string - Like a sentence or word</li>
+            </ul>
+            There are many more than just these data types, but a few that we use the most often. You can code them like
+            this:
+            <br>
+            <br>
+            <div class="codebox">
+                double numberOfNuggets = 10.51;<br>
+                boolean matchesNumberOnBox = False;<br>
+                string messageToEmployee = "Get it together";
+            </div>
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            How do I create variables?
+        </h1>
+    </div>
+    <div class="body">
+        <h3>
+            Ah, sweet old Java. It's never simple... Anyway, there are a few "parameters" you can declare before you
+            create your variable.
+            <ul>
+                <li>public - Allows you to access the variable from any file (Learn more about this below)</li>
+                <li>private - A variable contained in one file alone</li>
+                <li>static - So that you don't need to instantiate the class to use the variable</li>
+                <li>final - Once the variable is declared, it cannot be changed</li>
+            </ul>
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            What are classes?
+        </h1>
+    </div>
+    <div class="body accent">
+        <h3>
+            Imagine your room. Now, take everything out of your room so that it is empty. This is what a class is. In a
+            class, you can create functions, variables, loops, really anything. You can have mutliple classes working
+            all together to do multiple different things. But how do we do that? You can code classes like this:
+            <br>
+            <br>
+            <div class="codebox">
+                public class Robot {<br>
+                &emsp;public double numberOfNuggets = 10.51;<br>
+                &emsp;private boolean matchesNumberOnBox = False; <comment>// Notice this is private</comment>
+                <br>
+                &emsp;public string messageToEmployee = "Get it together";<br>
+                }
+            </div>
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            What are objects?
+        </h1>
+    </div>
+    <div class="body">
+        <h3>
+            An object is an instance of a class. You can't just magically use everything in a class in other classes.
+            You must first create an object! Once you create the object, anything in the class is now accessible
+            through that object. You can code them like this:
+            <br>
+            <br>
+            <div class="codebox">
+                Robot robotObject = new Robot();<br>
+                robotObject.numberOfNuggets; <comment>// 10.51</comment><br>
+                robotObject.matchesNumberOnBox; <comment>// Error: Does not exist</comment><br>
+                robotObject.messageToEmployee; <comment>// "Get it together"</comment>
+            </div>
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            What are loops?
+        </h1>
+    </div>
+    <div class="body accent">
+        <h3>
+            The easiest way to understand what a loop is - do something over and over again until someone says to stop.
+            That is what a loop is! It is an iteration of some code over and over again until it is stopped. The most
+            common loop we use is the "for loop". Basically, some code is executed repeatedly a specific number of times
+            until a certain condition is met. Another common loop is the "while loop". To sum this one up, it runs while
+            "x" = "y"; Until "x" does not equal "y", this loop will run. Examples of both loops are below:
+            <br>
+            <br>
+            <div class="codebox">
+                <comment>// i++ means increase i by 1 each time.</comment><br>
+                for (int i = 0; i <= 10; i++) {<br>
+                    &emsp;System.out.println(i);<br>
+                    }<br>
+                    <br>
+                    <comment>// The code below results in an infinite loop.</comment><br>
+                    while (true == true) {<br>
+                    <br>
+                    }
+            </div>
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            What are constants?
+        </h1>
+    </div>
+    <div class="body">
+        <h3>
+            Constants are variables that remain- well... constant! We typically put all of these variables in a
+            different file to keep the code nice and squeaky clean. These variables never change!
+        </h3>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            What is Camel Case?
+        </h1>
+    </div>
+    <div class="body accent">
+        <h3>
+            Camel Case is a naming convention in which multiple words are joined together without spaces, and each
+            word's first letter is capitalized except for the first word. Adam is a stickler for this! You can learn
+            more about Camel Case <a
+                href="https://www.freecodecamp.org/news/snake-case-vs-camel-case-vs-pascal-case-vs-kebab-case-whats-the-difference/#camel-case">here</a>.
+            Here is an example of a Camel Case variable name:
+            <br>
+            <br>
+            <div class="codebox">
+                int camelCaseName = 1;<br>
+                string anotherCamelCaseName = "Each word after the first is capitalized!";
+            </div>
+        </h3>
+    </div>
+    <div class="body">
+        <h2>
+            And there ya' go! You are all set to start learning about Java concepts! Proceed to the next tutorial to
+            learn about Java concepts.
+        </h2>
+    </div>
+    <br>
+    <div class="footer body">
+        <button onclick="previousbutton()">Previous</button>
+        <button onclick="nextbutton()">Next</button>
+    </div>
+    <br>
+    <br>
+    <div class="body accent center" id="footer"></div>
+</body>
+
+<script src="./data/index.js"></script>
+
+</html>

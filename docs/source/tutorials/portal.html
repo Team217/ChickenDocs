@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thunderchickens Java Tutorial</title>
+    <link rel="stylesheet" href="./data/main.css">
+    <script>
+        function tweedle() {
+            document.body.innerHTML = `<h1 class="center title">Do not be a Tweedledum</h1><div style="margin: 7.5%"><img src="./data/tweedledum.png"></div>`;
+        }
+    </script>
+</head>
+
+<body>
+    <div style="display: none;" id="data">Page0</div>
+    <div class="center title">
+        <h1>Java Tutorial | Home</h1>
+        <!-- <img style="max-width: fit-content;" -->
+    </div>
+    <hr>
+    <div class="accent body">
+        <h2>
+            Welcome to the Thunderchickens Java Tutorial. This tutorial will guide you step-by-step on how Java works,
+            and how we tend to code here at Thunderchickens.
+            <br>
+            First, here's a tutorial on how to use this website!
+        </h2>
+    </div>
+    <div class="body">
+        <h2>
+            <ol>
+                <li>Once you are ready, press the next button.</li>
+                <li>This will take you to a page where you can learn more about coding.</li>
+                <li>Once you are done with each tutorial, press the next button again to continue.</li>
+                <li>Remember, don't forget to have fun!</li>
+            </ol>
+        </h2>
+    </div>
+    <br>
+    <br>
+    <div class="center title">
+        <h1 style="text-decoration: underline;">Recommended Tools</h1>
+    </div>
+    <div class="body accent">
+        <h2>
+            <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
+            <br>
+            ^ This will be your IDE for programming.
+            <br>
+            <br>
+            <a href="https://www.7-zip.org/" target="_blank">7-Zip</a>
+            <br>
+            ^ This will make unzipping files a lot easier.
+            <br>
+            <br>
+            <a class="imitatea" onclick="tweedle()">Some basic knowledge on programming</a>
+            <br>
+            ^ Please.
+        </h2>
+    </div>
+    <br>
+    <div class="footer body">
+        <button onclick="nextbutton()">Next</button>
+    </div>
+    <br>
+    <br>
+    <div class="body accent center" id="footer"></div>
+</body>
+
+<script src="./data/index.js"></script>
+
+</html>
