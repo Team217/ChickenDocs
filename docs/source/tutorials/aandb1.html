@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThunderChickens Java Tutorial</title>
+    <link rel="stylesheet" href="./data/main.css">
+</head>
+
+<body>
+    <div style="display: none;" id="data">Page6</div>
+    <div class="center title">
+        <h1>Java Tutorial | Above & Beyond 1</h1>
+        <h2>Programming</h2>
+    </div>
+    <hr>
+    <div class="accent body">
+        <h2>
+            Welcome to the first ThunderChickens A&B Java Tutorial.
+        </h2>
+    </div>
+    <div class="body">
+        <h2>
+            This tutorial will answer these questions:
+            <ol>
+                <li>How do we program?</li>
+            </ol>
+            There's a lot to do, so let's get started!
+        </h2>
+    </div>
+    <br>
+    <br>
+    <div class="title center">
+        <h1>
+            How do we program?
+        </h1>
+    </div>
+    <div class="body accent">
+        <h3>
+            As we've gone over in the past tutorials, we program in subsystems, meaning we have many files for different
+            parts of the robot. Here's how we code one of them:
+            <br>
+            <br>
+            <div style="font-size: smaller; padding-left: 15px; margin-left: 4%; color:tomato;">Robot.java</div>
+            <div class="codebox">
+                <comment>// This file is called Robot.java. This is where we initialize our Robot Container (Where we
+                    initialize our subsystems) and other functions.</comment><br><br>
+                package frc.robot; <comment>// FRC stuff</comment><br><br>
+                <comment>// Here, we create the Robot class where all of our initializing will be.</comment><br>
+                public class Robot extends LoggedRobot {<br>
+                &emsp;<comment>// We create the variable for the robot container. We will initialize it further below.
+                </comment><br>
+                &emsp;private final RobotContainer m_robotContainer;<br><br>
+                &emsp;<comment>// This is our main function in the Robot.java file. This is run every time we give code
+                    to the robot.</comment><br>
+                &emsp;public Robot() {<br>
+                &emsp;&emsp;m_robotContainer = new RobotContainer();<br>
+                &emsp;}<br>
+                }
+            </div>
+            <br>
+            Once we have initialized our Robot Container file, let's move to RobotContainer.java to see what we're
+            initializing!
+            <br>
+            <br>
+            <div style="font-size: smaller; padding-left: 15px; margin-left: 4%; color:tomato;">RobotContainer.java
+            </div>
+            <div class="codebox">
+                <comment>// This file is called RobotContainer.java. This is where we initialize our subsystems and map
+                    commands to the controller.
+                </comment><br><br>
+                package frc.robot; <comment>// FRC stuff</comment><br>
+                import frc.robot.subsystems.ElevatorSubsystem; <comment>// Our elevator subsystem</comment><br>
+                private final Controller m_operatorController = new
+                XboxController(0);<comment> // The controller on port 0</comment><br><br>
+                public class RobotContainer {<br>
+                &emsp;private final ElevatorSubsystem m_elevator = new ElevatorSubsystem();<br><br>
+                &emsp;<comment>// This is our main function in the RobotContainer.java file.</comment><br>
+                &emsp;public RobotContainer() {<br>
+                &emsp;&emsp;<comment>// This is where we set our default command and configure our bindings.</comment>
+                <br>
+                &emsp;&emsp;m_elevator.setDefaultCommand(m_elevator.manual(m_operatorController::getRightY));<br>
+                &emsp;&emsp;<comment>// Whenever the A button is pressed, the elevator will go up.</comment><br>
+                &emsp;&emsp;m_operatorController.upButton().onTrue(m_elevator.goUp());<br>
+                &emsp;}<br>
+                }
+            </div>
+            <br>
+            <br>
+            This is great! We know what RobotContainer does! The elevator subsystem looks just like this one, except
+            with more functions and features. Great job.
+        </h3>
+    </div>
+    <div class="body">
+        <h2>
+            And there ya' go! You are all set to go to A&B 2!
+        </h2>
+    </div>
+    <br>
+    <div class="footer body">
+        <button onclick="previousbutton()">Previous</button>
+        <button onclick="nextbutton()">Next</button>
+    </div>
+    <br>
+    <br>
+    <div class="body accent center" id="footer"></div>
+</body>
+
+<script src="./data/index.js"></script>
+
+</html>
