@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThunderChickens Java Tutorial</title>
-    <link rel="stylesheet" href="./data/main.css">
+    <link rel="stylesheet" href="../data/main.css">
 </head>
 
 <body>
@@ -57,7 +57,8 @@
             a commutator (big boy motor word) to transfer electricity to the rotor (rotatey thingy), while brushless
             motors use electronic switching to control the magnetic field, eliminating the need for brushes. Brushless
             motors are significantly more efficient and have longer lifespans compared to brushed motors because they
-            lack physical brushes, which eliminates friction and wear caused by contact with a commutator.
+            lack physical brushes, which eliminates friction and wear caused by contact with a commutator. This is how
+            we program motors:
         </h3>
     </div>
     <br>
@@ -72,6 +73,13 @@
             So we have motors, but how do we control them? We use Spark MAXes to do this. Spark MAXes are motor
             controllers developed by REV Robotics. They control the speed, direction, and other aspects of motors, often
             used with the brushless motors, such as the NEO motors we talked about above.
+            <br>
+            <br>
+            <div class="codebox">
+                private SparkMax motor;<br>
+                <comment>// For below, 0 is the motor ID, and the motor type is brushless.</comment><br>
+                motor = new SparkMax(0, MotorType.kBrushless);
+            </div>
         </h3>
     </div>
     <br>
@@ -101,7 +109,15 @@
             Limit switches are pieces of hardware that we use to limit other hardware, like motors. If you remember the
             elevator subsystem from the 2025 robot, you can see that we use limit switches to determine when the motors
             stop. We placed the limit switches at the top and bottom of our elevator so that we couldn't go past the
-            floor or ceiling. This is only one example of how limit switches are used; the sky is the limit!
+            floor or ceiling. This is only one example of how limit switches are used; the sky is the limit! This is how
+            we code limit switches:
+            <br>
+            <br>
+            <div class="codebox">
+                private DigitalInput limitSwitch;<br>
+                <comment>// For below, 0 is the limit switch ID.</comment><br>
+                limitSwitch = new DigitalInput(0);
+            </div>
         </h3>
     </div>
     <br>
@@ -115,7 +131,13 @@
         <h3>
             Using banner sensors is another way of limiting other hardware. They serve the same purpose, but function a
             bit differently. Instead of hitting a physical button, hardware intercepts a beam the sensor is outputing,
-            and that sends a signal to software to trigger a function.
+            and that sends a signal to software to trigger a function. Here's how we code banner sensors:
+            <br>
+            <br>
+            <div class="codebox">
+                private SparkLimitSwitch bannerSensor;<br>
+                bannerSensor = motor.getForwardLimitSwitch();
+            </div>
         </h3>
     </div>
     <br>
@@ -131,7 +153,13 @@
             them into digital properties. The encoder allows us to track rotation speed, and position of the motor. This
             is useful for applications like our robot. According to <a
                 href="https://docs.wpilib.org/en/stable/docs/software/hardware-apis/sensors/encoders-software.html#encoders-software">this
-                resource</a>, "Encoders are devices used to measure motion (usually, the rotation of a shaft)."
+                resource</a>, "Encoders are devices used to measure motion (usually, the rotation of a shaft)." This is
+            how we code encoders:
+            <br>
+            <br>
+            <div class="codebox">
+                private AbsoluteEncoder motorEncoder = motor.getAbsoluteEncoder();
+            </div>
         </h3>
     </div>
     <br>
@@ -178,6 +206,6 @@
     <div class="body accent center" id="footer"></div>
 </body>
 
-<script src="./data/index.js"></script>
+<script src="../data/index.js"></script>
 
 </html>
