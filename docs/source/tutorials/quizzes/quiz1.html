@@ -17,29 +17,16 @@
     <hr>
     <div class="title center">
         <h1>
-            <label for="question1">What is the capital of France?</label>
+            What is a robot?
         </h1>
     </div>
     <div class="body accent">
-        <input type="radio" id="question1" value="London"> London<br>
-
-        <input type="radio" id="question1" value="Paris"> Paris<br>
-
-        <input type="radio" id="question1" value="Berlin"> Berlin<br>
-    </div>
-    <br>
-    <br>
-    <div class="title center">
-        <h1>
-            What does a robot do?
-        </h1>
-    </div>
-    <div class="body">
         <h3>
-            So we know what a robot is, but what does a robot do? In robotics, we are given a game for our robot to
-            compete in. This game can vary from putting PVC pipe on an even taller PVC pipe (Reefscape 2025), to scoring
-            rings in different places (<a href="https://en.wikipedia.org/wiki/Crescendo_(FIRST)">Crescendo 2024</a>). We
-            create our robot to do these tasks.
+            A <input type="radio" id="q1" name="q1" value="A"> A machine that can perform tasks automatically.<br>
+            B <input type="radio" id="q1" name="q1" value="B"> Equipment that can be controlled or operate by
+            themselves.<br>
+            C <input type="radio" id="q1" name="q1" value="C"> Something that can do multiple tasks.<br>
+            D <input type="radio" id="q1" name="q1" value="D"> All of the above.
         </h3>
     </div>
     <br>
@@ -51,94 +38,22 @@
     </div>
     <div class="body accent">
         <h3>
-            For a robot to work, you first need a robot to work with. But how do you get a robot? You make it! With the
-            help of our departments (Electrical, Mechanical, Design, Programming, Manufacturing, Business, & More), we
-            can create our own robot. A robot works by taking code from the programmer, going through wires from
-            electrical, and into motor put on the robot by mechanical. Basically, a robot needs many different parts to
-            function. No one person can do it all themself!
+            A <input type="radio" id="q2" name="q2" value="A"> Someone builds it all themself.<br>
+            B <input type="radio" id="q2" name="q2" value="B"> It just works.<br>
+            C <input type="radio" id="q2" name="q2" value="C"> There is a team of departments that build the robot.<br>
+            D <input type="radio" id="q2" name="q2" value="D"> None of the above.
         </h3>
     </div>
     <br>
     <br>
-    <div class="title center">
-        <h1>
-            How do I start coding?
-        </h1>
-    </div>
-    <div class="body">
-        <h3>
-            In order to start coding, you need a few different programs first. We use WPILib as our main coding
-            environment. Ask Adam to set it up for you. You will also need Driver Station! A full list of software you
-            may need will be below.
-            <br>
-            <ul>
-                <li>
-                    <a href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html">WPILib</a>
-                </li>
-                <li>
-                    <a
-                        href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/frc-game-tools.html#installing-the-frc-game-tools">Driver
-                        Station</a>
-                </li>
-                <li>
-                    <a
-                        href="https://github.com/Mechanical-Advantage/AdvantageScope/releases/tag/v4.1.2">AdvantageScope</a>
-                </li>
-                <li>
-                    <a href="https://docs.revrobotics.com/rev-hardware-client/gs/install">REV Hardware Client</a>
-                </li>
-                <li>
-                    <a href="https://github.com/mjansen4857/pathplanner/releases">PathPlanner</a>
-                </li>
-                <li>
-                    <a href="https://github.com/Gold872/elastic-dashboard/releases">Elastic</a>
-                </li>
-                <li>
-                    <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a>
-                </li>
-            </ul>
-        </h3>
+    <div class="center">
+        <button onclick="submitquiz()" id="submit">Submit</button>
+        <h3 id="feedback" style="display: none;"></h3>
     </div>
     <br>
-    <br>
-    <div class="title center">
-        <h1>
-            How can I set up the robot for programming?
-        </h1>
-    </div>
-    <div class="body accent">
-        <h3>
-            You may need to update some firmware on the robot for it to work the first time. To do that, visit the pages
-            below!
-            <br>
-            <ul>
-                <li>
-                    <a href="https://docs.wpilib.org/en/stable/docs/yearly-overview/returning-quickstart.html">WPILib
-                        Doc</a>
-                </li>
-                <li>
-                    <a href="https://docs.revrobotics.com/rev-hardware-client">REV Hardware Client Doc</a>
-                </li>
-                <li>
-                    <a href="https://docs.wpilib.org/en/stable/docs/software/dashboards/advantagescope.html">AdvantageScope
-                        Doc</a>
-                </li>
-            </ul>
-        </h3>
-    </div>
-    <br>
-    <br>
-    <div class="body">
-        <h2>
-            And there ya' go! You are all set to start learning about Java basics! Proceed to the next tutorial to learn
-            about Java programming.
-        </h2>
-    </div>
     <br>
     <div class="footer body">
-        <button onclick="previousbutton()">Previous</button>
-        <button onclick="quizbutton()">Tutorial Quiz</button>
-        <button onclick="nextbutton()">Next</button>
+        <button onclick="nextbutton()" id="next" style="display: none;">Next</button>
     </div>
     <br>
     <br>
