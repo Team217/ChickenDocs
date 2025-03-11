@@ -18,7 +18,7 @@ body {
 }
 
 button {
-    background-color: #2f55ff;
+    background-color: #2c4dde;
     color: rgb(187, 218, 255);
     border: none;
     padding: 15px;
@@ -61,7 +61,7 @@ a:hover {
 .codebox {
     background-color: rgb(42, 42, 42);
     border-radius: 10px;
-    color: rgb(187, 218, 255);
+    color: #bbdaff;
     margin-left: 5%;
     margin-right: 5%;
     line-height: 30px;
