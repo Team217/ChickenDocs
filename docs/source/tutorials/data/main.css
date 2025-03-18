@@ -1,76 +1,81 @@
 body {
-    background-color: rgb(21, 21, 21);
-    color: #7aff6c;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
 }
 
 .center {
     text-align: center;
 }
 
-.accent {
-    color: #6682ff;
-}
-
 .body {
+    font-size: 1.35rem;
     margin-left: 5%;
     margin-right: 5%;
 }
 
 button {
-    background-color: #2c4dde;
-    color: rgb(187, 218, 255);
-    border: none;
+    background-color: white;
+    color: black;
     padding: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
     border-radius: 10px;
     font-size: 1.5rem;
+    border: solid;
+    border-width: 1px;
+    border-color: var(--bulma-footer-background-color);
 }
 
 button:hover {
     cursor: pointer;
-    background-color: #2f55ffab;
+    background-color: var(--bulma-footer-background-color);
+    color: white;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
 }
 
 .footer {
+    border-radius: 10px;
     display: flex;
     justify-content: space-evenly;
 }
 
 a {
-    color: bisque;
+    color: rgb(177, 255, 203);
 }
 
 a:hover {
-    color: rgba(255, 228, 196, 0.642);
-}
-
-.title {
-    color: rgb(187, 218, 255);
-}
-
-.imitatea {
-    color: bisque;
+    color: rgb(123, 178, 182);
     text-decoration: underline;
 }
 
+.title {
+    color: #bbdaff;
+    font-size: 2.5rem;
+}
+
+.imitatea {
+    color: rgb(177, 255, 203);
+}
+
 .imitatea:hover {
-    color: rgba(255, 228, 196, 0.642);
-    cursor: pointer;
+    color: rgb(123, 178, 182);
+    text-decoration: underline;
 }
 
 .codebox {
-    background-color: rgb(42, 42, 42);
+    background-color: var(--bulma-footer-background-color);
     border-radius: 10px;
     color: #bbdaff;
     margin-left: 5%;
     margin-right: 5%;
     line-height: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: rgb(187, 218, 255);
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: solid;
+    border-color: white;
     border-width: 2px;
 }
 
@@ -84,4 +89,17 @@ img {
     height: 100%;
     object-fit: contain;
     border-radius: 10px;
+}
+
+ol {
+    color: rgb(255, 201, 251);
+}
+
+ul {
+    list-style: circle;
+    color: cornflowerblue;
+}
+
+input[type='radio'] {
+    accent-color: hsl(221, 14%, 9%);
 }
