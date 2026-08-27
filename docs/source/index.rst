@@ -18,5 +18,6 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   usage.rst
+   api.rst
+   elevator-design-spec.md
