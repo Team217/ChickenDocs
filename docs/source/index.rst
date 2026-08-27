@@ -21,3 +21,4 @@ Contents
    usage.rst
    api.rst
    elevator-design-spec.md
+   mermaid.md
